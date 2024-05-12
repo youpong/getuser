@@ -4,3 +4,4 @@
 using namespace std;
 
 string getuser();
+string getuser2();

@@ -7,4 +7,5 @@ string getuser() {
 
 int main() {
     cout << getuser() << endl;
+    cout << getuser2() << endl;
 }

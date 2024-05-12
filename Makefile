@@ -1,10 +1,12 @@
 TARGET = getuser
+SRCS = getuser.cpp getuser2.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)
 clean:
-	- rm -f $(TARGET) *.o	
-$(TARGET): getuser.o
+	- rm -f $(TARGET) $(OBJS)
+$(TARGET): $(OBJS)
 	$(CXX) -o $@ $^
-getuser.o: getuser.h
+$(OBJS): getuser.h
 
 .PHONY: all clean
