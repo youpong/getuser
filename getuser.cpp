@@ -1,9 +1,10 @@
 #include "getuser.h"
+#include <unistd.h>
 
 string getuser() {
-    return "";
+    return getlogin();
 }
 
 int main() {
-    cout << getuser();
+    cout << getuser() << endl;
 }
