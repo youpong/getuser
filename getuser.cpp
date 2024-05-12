@@ -1,7 +1,4 @@
-#include <string>
-#include <iostream>
-
-using namespace std;
+#include "getuser.h"
 
 string getuser() {
     return "";
