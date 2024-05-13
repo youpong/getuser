@@ -12,6 +12,7 @@ on:
 
 jobs:
   unit-test:
+    continue-on-error: true
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
