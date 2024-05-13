@@ -22,5 +22,7 @@ void test_getuser(string want) {
 }
 
 void test_getlogin(string want) {
-    expect(want, string(getlogin()), "getlogin");
+    char* username = getlogin();
+    string s = username ? username : "";
+    expect(want, s, "getlogin");
 }
