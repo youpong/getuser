@@ -1,9 +1,10 @@
 #include "getuser.h"
 #include "util.h"
 
+#include <cerrno>
 #include <unistd.h> // getlogin()
 #include <sys/types.h>
-#include <sys/errno.h>
+//#include <sys/errno.h>
 #include <string.h>
 #include <pwd.h>
 
