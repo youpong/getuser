@@ -7,8 +7,11 @@ CXXFLAGS = -std=c++20
 all: $(TARGET)
 clean:
 	- rm -f $(TARGET) $(OBJS)
+check: $(TARGET)
+	./$(TARGET) -t 
+	@echo "Passed the test"
 $(TARGET): $(OBJS)
 	$(CXX) -o $@ $^
-$(OBJS): getuser.h
+$(OBJS): getuser.h util.h
 
-.PHONY: all clean
+.PHONY: all clean check
