@@ -1,5 +1,5 @@
 TARGET = getuser
-SRCS = getuser.cpp getuser2.cpp
+SRCS = main.cpp getuser.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CXXFLAGS = -std=c++20

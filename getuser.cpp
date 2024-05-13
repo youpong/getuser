@@ -1,17 +1,22 @@
 #include "getuser.h"
 #include "util.h"
-#include <unistd.h>
 
-string getuser() {
-    return getlogin();
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/errno.h>
+#include <string.h>
+#include <pwd.h>
+
+string getuser2() {
+    auto *p = getpwuid(getuid());
+    if (p == NULL) {
+        cout << "Could not get struct passwd: " << strerror(errno) << endl;
+        exit(1);
+    }
+
+    return p->pw_name;
 }
 
-int main(int argc, char* argv[]) {
-    if (argc == 2 && !strcmp(argv[1], "-t")) {
-        cout << "test";
-        return 1;
-    }
+void test_getuser() {
     
-    cout << getuser() << endl;
-    cout << getuser2() << endl;
 }
