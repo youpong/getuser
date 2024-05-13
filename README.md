@@ -1,6 +1,6 @@
 # README.md
 
-sample program for getting username.
+Sample program for getting username on multiple platforms: Windows, macOS and Ubuntu.
 
 # LICENSE
 
