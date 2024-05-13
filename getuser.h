@@ -5,4 +5,5 @@
 using namespace std;
 
 string getuser();
-void test_getuser();
+void test_getuser(string);
+void test_getlogin(string);

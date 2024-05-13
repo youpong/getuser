@@ -8,7 +8,7 @@ all: $(TARGET)
 clean:
 	- rm -f $(TARGET) $(OBJS)
 check: $(TARGET)
-	./$(TARGET) -t 
+	./$(TARGET) -t $(USER)
 	@echo "Passed the test"
 $(TARGET): $(OBJS)
 	$(CXX) -o $@ $^
