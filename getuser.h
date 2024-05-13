@@ -5,4 +5,4 @@
 using namespace std;
 
 string getuser();
-string getuser2();
+void test_getuser();

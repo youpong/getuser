@@ -7,7 +7,7 @@
 #include <string.h>
 #include <pwd.h>
 
-string getuser2() {
+string getuser() {
     auto *p = getpwuid(getuid());
     if (p == NULL) {
         cout << "Could not get struct passwd: " << strerror(errno) << endl;
